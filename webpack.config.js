@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     index: './src/index.js',
     another: './src/another-module.js',
+    es6: './src/es6.js',
   },
   devtool: 'inline-source-map', // 可以显示报错在哪一行
   devServer: {
@@ -18,7 +19,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     publicPath: '/',
@@ -34,6 +35,11 @@ module.exports = {
         type: 'asset/resource',
       },
       {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
+      {
         test: /\.json5$/i,
         type: 'json',
         parser: {
@@ -43,6 +49,8 @@ module.exports = {
     ],
   },
   optimization: {
+    moduleIds: 'deterministic', // hash只有改变的需要更改
+    runtimeChunk: 'single',
     splitChunks: {
       chunks: 'all',
     },
