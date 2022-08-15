@@ -29,4 +29,11 @@ var odds = [1, 2, 3, 4].map(function (v) {
 
 ## @babel/runtime
 
+## @babel/register
+
 ## rootMode: "upward"
+
+
+## 相关文档
+- [webpack 优化生成代码](https://juejin.cn/post/6915665292370640910)  
+- [知乎babel教程](https://www.zhihu.com/column/c_1402924598862778368)

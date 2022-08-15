@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     index: './src/index.js',
     another: './src/another-module.js',
-    es6: './src/es6.js',
+    // es6: './src/es6.js',
   },
   devtool: 'inline-source-map', // 可以显示报错在哪一行
   devServer: {

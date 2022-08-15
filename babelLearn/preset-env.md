@@ -3,12 +3,16 @@
 
 ## Options
 - useBuiltIns 默认false
-  - entry 将
+  - false 的时候会在页面引入polyfill，但是不会做公共提取
+  - entry 的时候需要导入 import core-js, 文件内部导入需要的
+  - usage 打包的时候会提示不要引入import core-js，会按需导入
+```
+ When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the direct import of `core-js` or use `useBuiltIns: 'entry'` instead.
+```  
 
 
 
 
 
 
-## 相关文档
-- [webpack 优化生成代码](https://juejin.cn/post/6915665292370640910)  

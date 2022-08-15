@@ -5,7 +5,7 @@
   - 但，webpack-cli对于打包文件不是必要的
 
 ## 资源模块类型（asset module type)
-  - 在webpack5之前，加载这些资源我们需要使用一些loader,比如raw-loader、u rl-loader、file-loader。
+  - 在webpack5之前，加载这些资源我们需要使用一些loader,比如raw-loader、url-loader、file-loader。
   - asset/resource  发送一个单独的文件并导出URL,之前通过使用file-loader实现；
   - asset/inline   导出一个资源的data URL。之前通过使用url-loader 实现；
   - asset/source 导出资源的源代码。之前通过使用raw-loader 实现；
